@@ -6,10 +6,8 @@ const app = express();
 
 app.use(bodyParser.json());
 
-// Show generator page
-app.get("/", function(req, res) {
-  res.send("Hello World!");
-});
+// Static pages, like configuration ui
+app.use(express.static("public"));
 
 function short(text, max) {
   if(text.length > max) {
@@ -47,6 +45,7 @@ app.post("/hooks/:id/:token/gitlab", function(req, res) {
   res.send("");
 });
 
-app.listen(80, function() {
-  console.log("Server started at port 80");
+var port = process.env.PORT || 80;
+app.listen(port, function() {
+  console.log("Server started at port " + port);
 });
