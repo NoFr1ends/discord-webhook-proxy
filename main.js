@@ -1,13 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
+const path = require("path");
 
 const app = express();
 
 app.use(bodyParser.json());
 
 // Static pages, like configuration ui
-app.use(express.static("public"));
+app.use(express.static(path.resolve(__dirname, 'public')));
 
 function short(text, max) {
   if(text.length > max) {

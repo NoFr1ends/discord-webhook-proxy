@@ -1,6 +1,6 @@
 {
   "name": "discord-webhook-proxy",
-  "version": "1.0.0",
+  "version": "0.2.2",
   "description": "A webhook which transform incoming data to discord webhook",
   "main": "main.js",
   "scripts": {
@@ -16,5 +16,8 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "request": "^2.81.0"
+  },
+  "bin": {
+    "discord-webhook-proxy": "./bin/discord-webhook-proxy"
   }
 }
