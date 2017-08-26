@@ -1,0 +1,19 @@
+remote:
+  host: "dwhp.kryptondev.de"
+  user: "ubuntu"
+  path: "/home/ubuntu/dwhp"
+behaviour:
+  uploadOnSave: true
+  syncDownOnOpen: true
+  forgetConsole: false
+  autoHideConsole: true
+  alwaysSyncAll: false
+option:
+  deleteFiles: false
+  exclude: [
+    ".sync-config.cson"
+    ".git"
+    "node_modules"
+    "tmp"
+    "vendor"
+  ]

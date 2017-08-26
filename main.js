@@ -11,6 +11,7 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 
 // GitLab Converter
 require("./converters/gitlab")(app);
+require("./converters/bitbucket")(app);
 
 var port = process.env.PORT || 80;
 app.listen(port, function() {
