@@ -24,11 +24,11 @@ function buildUrl() {
     $("#discord-webhook-url").addClass("is-invalid");
   }
 
-  var selected = $("#output-type:checked");
+  var selected = $(".output-type:checked");
   if(selected.length > 0) {
     url += "/" + selected.val();
   } else {
-    $("#output-type").addClass("is-invalid");
+    $(".output-type").addClass("is-invalid");
     url = "";
     error = true;
   }
